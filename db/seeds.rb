@@ -1,7 +1,13 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
-#   Mayor.create(:name => 'Daley', :city => cities.first)
+Partner.create([{ :name => 'Coursera', :description => 'We are a social entrepreneurship company that partners with the top universities in the world to offer courses online for anyone to take, for free. We envision a future where the top universities are educating not only thousands of students, but millions. Our technology enables the best professors to teach tens or hundreds of thousands of students.Through this, we hope to give everyone access to the world-class education that has so far been available only to a select few. We want to empower people with education that will improve their lives, the lives of their families, and the communities they live in.'}, { :name => 'Codeschool', :description => 'Code School teaches web technologies in the comfort of your browser with video lessons, coding challenges, and screencasts.'}, { :name => 'Udemy', :description => 'Udemy helps students make moves. Whether you want to get promoted, break into a new industry, start a company, further a passion, or just accelerate your life, Udemy helps you learn from the amazing instructors in the world, so that you can get there and get there faster.'}])
+
+Course.create([
+  { :name => 'Try Ruby', :description => 'Learn the basic building blocks of Ruby, all in the browser.', :size => 3, :partner_id => 2},
+	{ :name => 'Programming', :description => 'Programming languages', :size => 5, :partner_id => 2},
+
+	{ :name => 'Python', :description => 'An Introduction to Interactive Programming in Python', :size => 4, :partner_id => 3},
+	{ :name => 'Digital Marketing Management', :description => 'A Certificate of Completion is Presented to Students who Undertake the Course.', :size => 7, :partner_id => 3},
+	{ :name => 'The Complete Web Developer', :description => 'This is The Complete Web Developer: The Everything You Need To Know web development course about making websites.', :size => 5, :partner_id => 3},
+
+	{ :name => 'Introduction to Finance', :description => 'This course is primarily devoted to the fundamental principles of valuation. We will learn and apply the concepts of time value of money and risk to understand the major determinants of value creation. We will use both theory and real world examples to demonstrate how to value any asset.', :size => 9, :partner_id => 3},
+	{ :name => 'Inspiring Leadership through Emotional Intelligence', :description => 'Great leaders move us through our emotions. They establish a deep emotional connection with others called resonance. Their own levels of emotional intelligence allow them to create and nurture these resonant relationships.', :size => 11, :partner_id => 3}	
+])
