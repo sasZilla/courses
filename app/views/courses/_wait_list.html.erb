@@ -1,0 +1,19 @@
+<h2>Wait List</h2>
+<table class="list">
+  <tr>
+    <th>Course name</th>
+    <th>Students</th>
+    <th></th>
+  </tr>
+
+<% @lists.each do |list| %>
+  <tr>
+    <td><%= list.course.name %></td>
+    <td>
+    <% list.users.each do |user| %>
+      <%= user.username %> <br/>
+    <% end %>
+    </td>
+  </tr>
+<% end %>
+</table>

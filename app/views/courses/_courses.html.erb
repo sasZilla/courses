@@ -1,0 +1,20 @@
+<h2>Courses</h2>
+<table class="list">
+  <tr>
+    <th>Course name</th>
+    <th>Description</th>
+    <th>Size</th>
+    <th>Places left</th>
+    <th></th>
+  </tr>
+
+<% @courses.each do |course| %>
+  <tr>
+    <td><%= course.name %> (<%= course.partner.name %>)</td>
+    <td><%= course.description %></td>
+    <td><%= course.size %></td>
+    <td><%= places_left(course) %></td>
+    <td><%= link_to 'Buy course', add_course_path(course) %></td>
+  </tr>
+<% end %>
+</table>
