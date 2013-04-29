@@ -11,6 +11,8 @@ group :development do
     gem 'sqlite3', '1.3.4'  
 end
 
+gem 'sqlite3-ruby'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
