@@ -1,11 +1,15 @@
-source 'http://rubygems.org'
-
-gem 'rails', '3.2.8'
-gem 'authlogic'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
+source :gemcutter
+gem 'rails'
+gem 'authlogic'
+group :production do    
+    gem 'pg', '0.12.2'  
+end  
+group :development do  
+    gem 'sqlite3', '1.3.4'  
+end
 
 # Use unicorn as the web server
 # gem 'unicorn'
